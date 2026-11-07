@@ -8,10 +8,11 @@ Open `index.html` in a browser. No build step or framework is required.
 ## Project files
 - `index.html` — page structure, navigation, content, and lightweight mobile-menu behavior
 - `style.css` — responsive layout, typography, color system, and component styling
+- Brand logo — supplied TechBridge logo displayed in the header and footer
 
 ## Official links included
-- Internship application: https://forms.gle/8EbdSy5ttGfLZfjv5?utm_source=chatgpt.com
-- WhatsApp community: https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS?utm_source=chatgpt.com
+- Internship application: https://forms.gle/8EbdSy5ttGfLZfjv5
+- WhatsApp community: https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS
 - Email: techbridgebaslink@gmail.com
 - LinkedIn: https://www.linkedin.com/company/techbridge-services/
 - Facebook: https://www.facebook.com/p/Baselink-Services-100066771475783/
