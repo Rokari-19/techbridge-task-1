@@ -19,5 +19,6 @@ Open `index.html` in a browser. No build step or framework is required.
 - LinkedIn: https://www.linkedin.com/company/techbridge-services/
 - Facebook: https://www.facebook.com/p/Baselink-Services-100066771475783/
 
-## Developer note
-I built the TechBridge homepage with semantic HTML5 and a separate CSS3 stylesheet, keeping the experience responsive across desktop and mobile screens. The homepage introduces the 30-day practical internship, while the dedicated Programs page explains the focus and core skills of Data Analytics and Web Development. I used only the organization details and official links supplied in the brief, avoiding invented testimonials, statistics, or contact information. The two pages share the supplied local logo, typography, navigation, buttons, and footer so visitors can move between the overview and the program details. I used program-specific visual treatments and skill lists to distinguish working with data from building for the web, while keeping the layouts responsive with CSS.
+## Task 2 developer note
+
+I approached Task 2 as a dedicated Programs page that extends the existing TechBridge homepage rather than a separate visual project. I presented Data Analytics as a path for preparing, exploring, and communicating data, and Web Development as a path for building websites and web experiences, with the supplied skill areas shown as clear tags. I learned how a shared design system and consistent navigation can connect separate pages while still giving each program its own visual identity. The main challenge was explaining the two paths clearly without inventing a curriculum beyond the official brief, so the page stays focused on the supplied topics and practical outcomes.
