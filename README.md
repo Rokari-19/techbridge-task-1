@@ -20,11 +20,3 @@ The roadmap uses vanilla JavaScript arrays and objects to store task information
 
 ## Developer note
 I structured the roadmap as two selectable tracks, each containing its own array of eight task objects. JavaScript listens for track-selection events and rebuilds the milestone list and task cards without reloading the page. I used variables, arrays, objects, functions, event listeners, conditional logic and DOM manipulation to keep the interaction in plain JavaScript. The selected track is clearly marked, and its day sequence, descriptions and difficulty labels update together. I also added keyboard support to the track selector and kept the layout responsive across desktop, tablet and mobile screens. One challenge was ensuring that switching tracks updates every related part of the interface consistently, so I used a single render function as the source of truth for the selected track.
-
-## Official links
-- Internship application: https://forms.gle/8EbdSy5ttGfLZfjv5
-- WhatsApp community: https://chat.whatsapp.com/FqpBvYS4oaK32cXDxc8JIS
-- Email: techbridgebaslink@gmail.com
-- Instagram: https://www.instagram.com/techbridgeserves
-- LinkedIn: https://www.linkedin.com/company/techbridge-services/
-- Facebook: https://www.facebook.com/p/Baselink-Services-100066771475783/
