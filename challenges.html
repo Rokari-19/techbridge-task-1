@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d004d">
+  <meta name="description" content="Explore practical Data Analytics and Web Development challenges from the TechBridge internship.">
+  <title>Challenge Hub | TechBridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="challenges.css">
+  <script src="challenges.js" defer></script>
+</head>
+<body class="challenges-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#top" aria-label="TechBridge home"><img class="brand-logo" src="assets/techbridge-logo.png" width="554" height="107" alt="TechBridge" decoding="async"></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#top">Home</a><a href="index.html#programs">Programs</a><a href="tasks.html">Internship roadmap</a><a class="active-link" href="challenges.html" aria-current="page">Challenge hub</a>
+        <a class="nav-cta" href="https://forms.gle/8EbdSy5ttGfLZfjv5" target="_blank" rel="noopener">Apply now <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="challenge-hero">
+      <div class="container challenge-hero-grid">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> LEARN BY TAKING ON A CHALLENGE</div>
+          <p class="challenge-kicker">THE TECHBRIDGE CHALLENGE HUB</p>
+          <h1>Make skills<br><em>mean something.</em></h1>
+          <p class="challenge-lede">Explore practical challenges from both internship tracks. Each brief gives you a clear objective, a realistic deliverable and a useful next step for building your skills.</p>
+          <a class="button button-primary" href="#challenge-browser">Explore challenges <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="challenge-overview">
+          <span class="overview-label">A LITTLE PRACTICE GOES A LONG WAY</span>
+          <strong>06<span>+</span></strong>
+          <p>Hands-on briefs across two learning tracks, from first steps to more involved projects.</p>
+          <div class="overview-tags"><span>DATA ANALYTICS</span><span>WEB DEVELOPMENT</span></div>
+        </aside>
+      </div>
+      <div class="container hero-bottom"><span>02 / EXPLORE THE CHALLENGES</span><span>CHOOSE A BRIEF <span aria-hidden="true">↓</span></span></div>
+    </section>
+
+    <section class="challenge-section section" id="challenge-browser">
+      <div class="container">
+        <div class="challenge-heading">
+          <div><div class="eyebrow">FIND YOUR NEXT BUILD</div><h2>Explore the<br><em>challenge library.</em></h2></div>
+          <p>Filter by learning track or difficulty, then open any challenge to see what you’ll work on and what you should deliver.</p>
+        </div>
+        <div class="challenge-controls" aria-label="Challenge filters">
+          <div class="filter-group">
+            <span class="filter-label" id="track-filter-label">TRACK</span>
+            <div class="filter-options" role="group" aria-labelledby="track-filter-label">
+              <button class="filter-button is-active" type="button" data-filter="track" data-value="all" aria-pressed="true">All tracks</button>
+              <button class="filter-button" type="button" data-filter="track" data-value="data" aria-pressed="false">Data Analytics</button>
+              <button class="filter-button" type="button" data-filter="track" data-value="web" aria-pressed="false">Web Development</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-label" id="difficulty-filter-label">DIFFICULTY</span>
+            <div class="filter-options" role="group" aria-labelledby="difficulty-filter-label">
+              <button class="filter-button is-active" type="button" data-filter="difficulty" data-value="all" aria-pressed="true">All levels</button>
+              <button class="filter-button" type="button" data-filter="difficulty" data-value="Beginner" aria-pressed="false">Beginner</button>
+              <button class="filter-button" type="button" data-filter="difficulty" data-value="Intermediate" aria-pressed="false">Intermediate</button>
+              <button class="filter-button" type="button" data-filter="difficulty" data-value="Advanced" aria-pressed="false">Advanced</button>
+            </div>
+          </div>
+          <button class="reset-filters" id="reset-filters" type="button">Reset filters <span aria-hidden="true">↺</span></button>
+        </div>
+        <div class="results-bar"><p id="results-count" aria-live="polite">Showing 6 challenges</p><span>SELECT A CHALLENGE TO VIEW ITS BRIEF</span></div>
+        <div class="challenge-grid" id="challenge-grid" aria-live="polite"></div>
+        <p class="no-results" id="no-results" hidden>No challenges match those filters. Try another combination.</p>
+      </div>
+    </section>
+
+    <section class="challenge-bottom">
+      <div class="container challenge-bottom-inner">
+        <div><div class="eyebrow eyebrow-light">SMALL STEPS. REAL PROGRESS.</div><h2>Pick a challenge.<br><em>Make it yours.</em></h2><p>Use each brief as a starting point. Explore the task, plan your approach and focus on producing something you can explain.</p></div>
+        <a class="button button-light" href="tasks.html">View the internship roadmap <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <dialog class="challenge-dialog" id="challenge-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-header"><span class="dialog-eyebrow">CHALLENGE BRIEF</span><button class="dialog-close" type="button" aria-label="Close challenge details">×</button></div>
+    <div class="dialog-content" id="dialog-content"></div>
+  </dialog>
+  <footer class="site-footer">
+    <div class="container footer-top"><a class="brand brand-footer" href="index.html#top" aria-label="TechBridge home"><img class="brand-logo" src="assets/techbridge-logo.png" width="554" height="107" alt="TechBridge" decoding="async" loading="lazy"></a><p>Bridging Learning to Real-World Experience.</p><a class="email-link" href="mailto:techbridgebaslink@gmail.com">techbridgebaslink@gmail.com</a></div>
+    <div class="container footer-bottom"><span>© 2026 TechBridge by Baselink Services Limited</span><div class="social-links"><a href="index.html#top">Home</a><a href="tasks.html">Internship roadmap</a><a href="challenges.html" aria-current="page">Challenge hub</a><a href="https://www.linkedin.com/company/techbridge-services/" target="_blank" rel="noopener">LinkedIn</a></div></div>
+  </footer>
+</body>
+</html>
