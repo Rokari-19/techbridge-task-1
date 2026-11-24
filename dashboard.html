@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d3b">
+  <meta name="description" content="Track your TechBridge internship tasks, progress and learning journey.">
+  <title>Intern Dashboard | TechBridge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#top" aria-label="TechBridge home"><img class="brand-logo" src="assets/techbridge-logo.png" width="554" height="107" alt="TechBridge" decoding="async"></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html#top">Home</a>
+        <a href="tasks.html">Internship roadmap</a>
+        <a href="challenges.html">Challenge hub</a>
+        <a class="active-link" href="dashboard.html" aria-current="page">Dashboard</a>
+        <a class="nav-cta" href="https://forms.gle/8EbdSy5ttGfLZfjv5" target="_blank" rel="noopener">Apply now <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main" class="dashboard-main">
+    <section class="dashboard-welcome">
+      <div class="container welcome-inner">
+        <div class="welcome-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR TECHBRIDGE WORKSPACE</div>
+          <p class="welcome-date">30-DAY PRACTICAL INTERNSHIP <span>·</span> WEB DEVELOPMENT</p>
+          <h1>Welcome back, <em>Alex.</em></h1>
+          <p class="welcome-description">Your next step is already waiting. Keep building, keep learning, and use this space to stay on top of your internship.</p>
+          <div class="welcome-meta"><span class="status-indicator"></span><strong>Internship status</strong><span class="status-pill">In Progress</span></div>
+        </div>
+        <aside class="welcome-aside">
+          <span class="aside-label">YOUR LEARNING TRACK</span>
+          <div class="track-mark" aria-hidden="true">&lt;/&gt;</div>
+          <h2>Web Development</h2>
+          <p>From your first page to a connected internship platform.</p>
+          <a href="tasks.html" class="aside-link">View the full roadmap <span aria-hidden="true">↗</span></a>
+        </aside>
+      </div>
+      <div class="container welcome-foot"><span>01 / YOUR DASHBOARD</span><span>YOUR PROGRESS, AT A GLANCE</span></div>
+    </section>
+
+    <section class="progress-section section" aria-labelledby="progress-title">
+      <div class="container">
+        <div class="section-heading dashboard-section-heading">
+          <div><div class="eyebrow">KEEP MOVING FORWARD</div><h2 id="progress-title">Internship <em>progress.</em></h2></div>
+          <p>Update a task when you finish it. Your progress summary and task list will stay in sync.</p>
+        </div>
+        <div class="progress-panel">
+          <div class="progress-main">
+            <div class="progress-copy"><span class="panel-label">OVERALL COMPLETION</span><strong id="progress-percent">62.5%</strong></div>
+            <div class="progress-track" id="progress-track" role="progressbar" aria-label="Internship task completion" aria-valuemin="0" aria-valuemax="8" aria-valuenow="5"><span id="progress-fill"></span></div>
+            <div class="progress-caption"><span id="progress-fraction">5 of 8 tasks completed</span><span id="progress-next">3 tasks remaining</span></div>
+          </div>
+          <div class="progress-stats">
+            <div class="progress-stat"><span class="stat-icon completed-icon">✓</span><strong id="completed-count">5</strong><small>Completed</small></div>
+            <div class="progress-stat"><span class="stat-icon remaining-icon">◷</span><strong id="remaining-count">3</strong><small>Remaining</small></div>
+            <div class="progress-stat"><span class="stat-icon total-icon">▦</span><strong id="total-count">8</strong><small>Total tasks</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracker-section section" id="task-tracker" aria-labelledby="tracker-title">
+      <div class="container">
+        <div class="tracker-heading">
+          <div><div class="eyebrow">YOUR INTERNSHIP CHECKLIST</div><h2 id="tracker-title">The task <em>tracker.</em></h2><p>Eight practical milestones. Mark each one complete as you finish the work.</p></div>
+          <label class="task-search"><span class="sr-only">Search tasks</span><input id="task-search" type="search" placeholder="Search tasks…" autocomplete="off"><span aria-hidden="true">⌕</span></label>
+        </div>
+        <div class="tracker-toolbar">
+          <div class="task-filters" role="group" aria-label="Filter tasks by status">
+            <button class="task-filter is-active" type="button" data-status="all" aria-pressed="true">All <span id="filter-all-count">8</span></button>
+            <button class="task-filter" type="button" data-status="completed" aria-pressed="false">Completed <span id="filter-completed-count">5</span></button>
+            <button class="task-filter" type="button" data-status="in-progress" aria-pressed="false">In Progress <span id="filter-progress-count">1</span></button>
+            <button class="task-filter" type="button" data-status="not-started" aria-pressed="false">Not Started <span id="filter-not-started-count">2</span></button>
+          </div>
+          <span class="tracker-hint">SELECT A TASK TO VIEW ITS DETAILS</span>
+        </div>
+        <div class="task-dashboard-grid" id="dashboard-task-list" aria-live="polite"></div>
+        <p class="empty-tasks" id="empty-tasks" hidden>No tasks match your search and filter.</p>
+        <p class="storage-note"><span aria-hidden="true">↳</span> Your task progress is saved in this browser on this device.</p>
+      </div>
+    </section>
+
+    <section class="challenge-promo">
+      <div class="container challenge-promo-inner">
+        <div class="promo-symbol" aria-hidden="true">✳</div>
+        <div class="promo-copy"><div class="eyebrow eyebrow-light">PUT YOUR SKILLS TO WORK</div><h2>Need a practical<br><em>challenge?</em></h2><p>Explore six guided briefs across Data Analytics and Web Development. Each one comes with an objective and a clear outcome.</p></div>
+        <div class="promo-action"><strong>06</strong><span>CHALLENGES AVAILABLE</span><a class="button button-light" href="challenges.html">Explore challenges <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="technology-section section" id="technology-explorer">
+      <div class="container">
+        <div class="section-heading dashboard-section-heading">
+          <div><div class="eyebrow">EXPAND YOUR TOOLKIT</div><h2>Modern web <em>technologies.</em></h2></div>
+          <p>Explore popular tools used to build the frontend and backend of modern web applications.</p>
+        </div>
+        <div class="technology-explorer">
+          <div class="technology-tabs" role="tablist" aria-label="Explore web technologies">
+            <button class="technology-tab is-active" type="button" role="tab" id="tech-tab-next" aria-selected="true" aria-controls="technology-content" data-tech="next">Next.js <span>01</span></button>
+            <button class="technology-tab" type="button" role="tab" id="tech-tab-vue" aria-selected="false" aria-controls="technology-content" data-tech="vue">Vue.js <span>02</span></button>
+            <button class="technology-tab" type="button" role="tab" id="tech-tab-angular" aria-selected="false" aria-controls="technology-content" data-tech="angular">Angular <span>03</span></button>
+            <button class="technology-tab" type="button" role="tab" id="tech-tab-backend" aria-selected="false" aria-controls="technology-content" data-tech="backend">Backend <span>04</span></button>
+          </div>
+          <article class="technology-content" id="technology-content" role="tabpanel" aria-labelledby="tech-tab-next" tabindex="0">
+            <div class="technology-content-top"><span id="technology-category">REACT FRAMEWORK</span><span class="technology-number" id="technology-number">01 / 04</span></div>
+            <div class="technology-detail" id="technology-detail">
+              <h3>Next.js</h3>
+              <p>Next.js is a React framework for building full-stack web applications. It adds features such as file-based routing, server rendering, static generation and server-side capabilities, making it useful for performant websites, dashboards and e-commerce platforms.</p>
+              <div class="technology-tags"><span>React</span><span>Routing</span><span>Server rendering</span></div>
+              <a class="technology-learn" href="https://nextjs.org/learn" target="_blank" rel="noopener">Explore the official learning resources <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="backend-note"><span class="backend-note-icon">&lt;/&gt;</span><p><strong>Frontend + Backend = a complete application.</strong> The frontend is what people interact with. The backend handles business logic, authentication, data storage and APIs that send information to the frontend.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="task-dialog" id="task-dialog" aria-labelledby="task-dialog-title">
+    <div class="task-dialog-header"><span class="dialog-eyebrow">INTERNSHIP TASK DETAILS</span><button class="dialog-close" id="task-dialog-close" type="button" aria-label="Close task details">×</button></div>
+    <div class="task-dialog-content" id="task-dialog-content"></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-top"><a class="brand brand-footer" href="index.html#top" aria-label="TechBridge home"><img class="brand-logo" src="assets/techbridge-logo.png" width="554" height="107" alt="TechBridge" decoding="async" loading="lazy"></a><p>Bridging Learning to Real-World Experience.</p><a class="email-link" href="mailto:techbridgebaselink@gmail.com">techbridgebaselink@gmail.com</a></div>
+    <div class="container footer-bottom"><span>© 2026 TechBridge by Baselink Services Limited</span><div class="social-links"><a href="index.html#top">Home</a><a href="tasks.html">Internship roadmap</a><a href="challenges.html">Challenge hub</a><a href="dashboard.html" aria-current="page">Dashboard</a><a href="https://www.linkedin.com/company/techbridge-services/" target="_blank" rel="noopener">LinkedIn</a></div></div>
+  </footer>
+</body>
+</html>
