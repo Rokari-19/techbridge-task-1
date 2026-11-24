@@ -27,3 +27,14 @@ I structured the roadmap as two selectable tracks, each containing its own array
 ## Challenge Hub
 
 The Challenge Hub contains six practical briefs across Data Analytics and Web Development. Visitors can filter by track and difficulty, reset filters, and open an accessible dialog with each challenge's objective, skills, suggested tools, deliverables, estimated time and expected result. All interactions are handled with vanilla JavaScript without a page refresh.
+
+## Intern Dashboard
+
+The Intern Dashboard provides a sample Web Development intern workspace. It displays the eight project milestones, starts with Tasks 1–5 completed, Task 6 in progress and Tasks 7–8 not started, and calculates the completion percentage from the current task states. Interns can search and filter tasks, open task details, and update completion status without refreshing the page. Progress is saved in browser localStorage on the current device.
+
+The dashboard also links to the Challenge Hub and includes an interactive technology explorer covering Next.js, Vue.js, Angular and backend development. The backend overview introduces Node.js with Express, Django, Flask, Laravel and .NET. The page is built with separate HTML, CSS and JavaScript files and includes responsive layouts and keyboard-accessible controls.
+
+## Dashboard files
+- `dashboard.html` — dashboard structure, progress summary, task tracker and technology explorer
+- `dashboard.css` — responsive dashboard and component styling
+- `dashboard.js` — task data, local progress persistence, filters, task details and technology switching
